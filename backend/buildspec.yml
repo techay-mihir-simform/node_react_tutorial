@@ -1,0 +1,29 @@
+version : 2.0
+phases :
+  install:
+    commands:
+      - curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+      - sudo apt-get install -y nodejs
+      - npm install pm2@latest -g
+      - npm install -g serve
+  pre_build:
+    commands:
+      - cd frontend
+      - npm install
+      - cd ../
+      - cd backend
+      - npm install
+  build:
+    commands:
+      - cd frontend
+      - npm run build
+  post_build:
+    commands:
+      - cd frontend
+      - serve -s build
+      - cd ../
+      - cd backend
+      - pm2 start index.js
+artifacts:
+   files:
+     - '**/*'
