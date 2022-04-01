@@ -17,11 +17,11 @@ phases :
       - npm install
   build:
     commands:
+      - cd ../
       - cd frontend
       - npm run build
   post_build:
     commands:
-      - cd frontend
       - serve -s build
       - cd ../
       - cd backend
