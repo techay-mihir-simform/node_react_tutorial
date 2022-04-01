@@ -15,14 +15,18 @@ phases :
       - cd ../
       - cd backend
       - npm install
-  build:
+#   build:
+#     commands:
+#       - cd ../
+#       - cd frontend
+#       - npm run build
+#       - serve -s build
+  post_build:
     commands:
       - cd ../
       - cd frontend
       - npm run build
       - serve -s build
-  post_build:
-    commands:
       - cd ../
       - cd backend
       - pm2 start index.js
