@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/', (req,res) => {
     res.send("checking");
-}
+});
 
 router.get('/tweets', (req, res) => {
     const str = [
