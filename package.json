@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node backend/index.js",
     "start": "node backend/index.js",
-    #"client": "npm run start --prefix ../frontend"
+    "client": "npm run start --prefix ../frontend"
 	},
   "keywords": [],
   "author": "",
