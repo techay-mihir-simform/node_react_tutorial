@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js",
-    "start": "nodemon index.js",
+    "server": "node index.js",
+    "start": "node index.js",
     "client": "npm run start --prefix ../frontend"
 	},
   "keywords": [],
